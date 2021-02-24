@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PokeList from './PokeList';
 import pokemons from '../data/data.json';
 
-function App() {
-    const [pokemonData, setPokemonData] = useState(pokemons);
-
-    return
-} 
+class App extends React.Component {
+    render(){
+        console.log(pokemons);
+        return(
+            <PokeList pokemons={pokemons} />
+        );
+    }
+}
 
 export default App;
