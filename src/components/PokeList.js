@@ -2,21 +2,23 @@ import React from 'react';
 import Pokemon from './Pokemon';
 
 
-class PokeList extends React.Component {
-  render(){
-    const html = this.props.data.map((item) => {
-      return (
-        <li className="card-container" key={item.id}>
-          <Pokemon name={item.name} img={item.url} family={item.types} />
-        </li>
-      );
-    });
+const PokeList = (props) => {
+  const pokemons = props.list.map((onePoke) => {
     return (
-      <>
-        <ul className="main-container">{html}</ul>
-      </>
-    );
-  }
+       <li key={onePoke.id}>
+          <Pokemon pokemonItem={onePoke} />
+       </li>
+        )
+    });
+        
+  return (
+   
+    <div>
+      <ul>
+       {pokemons}
+      </ul>
+    </div>
+  );
 }
 
 export default PokeList;
