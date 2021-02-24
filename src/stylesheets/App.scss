@@ -1,3 +1,46 @@
-.body{
-    background-color: red;
+.body {
+  background-color: rgb(222, 241, 237);
+  color: #053044;
+  padding: 15px;
+
+  &__title{
+      text-align: center;
+      font-size: 30px;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    &--card {
+      background-color: #b4eaf0;
+      margin: 12px;
+      border: 2px solid rgb(4, 104, 134);
+      border-radius: 15px;
+      width: 160px;
+      width: 200px;
+      text-align: center;
+      text-transform: capitalize;
+      display: inline;
+    }
+  }
+}
+
+.card{
+    &__title{
+        background-color: rgb(112, 184, 189);
+        text-transform: capitalize;
+        color: #053044; 
+    }
+
+    &__image{
+        width: 65%;
+    }
+
+    &__list{
+        list-style: none;
+        text-align: start;
+        margin-bottom: 10px;
+
+    }
 }

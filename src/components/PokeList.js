@@ -5,7 +5,7 @@ import Pokemon from './Pokemon';
 const PokeList = (props) => {
   const pokemons = props.list.map((onePoke) => {
     return (
-       <li key={onePoke.id}>
+       <li className="body__container--card" key={onePoke.id}>
           <Pokemon pokemonItem={onePoke} />
        </li>
         )
@@ -14,7 +14,7 @@ const PokeList = (props) => {
   return (
    
     <div>
-      <ul>
+      <ul className="body__container" >
        {pokemons}
       </ul>
     </div>
