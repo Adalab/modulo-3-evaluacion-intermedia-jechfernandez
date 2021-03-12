@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from "prop-types";
 
 const Pokemon = props => {
   const pokemon = props.pokemonItem.types.map ((type, i) => {
@@ -18,6 +19,11 @@ const Pokemon = props => {
       </ul>
     </article>
   );
+};
+
+Pokemon.protoTypes = {
+  name: propTypes.string,
+  type: propTypes.array,
 };
 
 export default Pokemon;
